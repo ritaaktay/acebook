@@ -1,6 +1,5 @@
 const User = require("../models/user");
 const { body, validationResult } = require("express-validator");
-// const { body } = require("express-validator");
 
 const UsersController = {
   Index: (req, res) => {
@@ -24,12 +23,12 @@ const UsersController = {
   },
 
   Create: (req, res) => {
-    const errors = validationResult(req); // Finds the validation errors in this request and wraps them in an object with handy functions
+    const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      res.status(422).json({ errors: errors.array() });
-      // return;
-      console.log("THERE IS AN ERROR");
+      return res
+        .status(422)
+        .render("error", { message: JSON.stringify(errors.array()[0].msg) });
     }
 
     const user = new User(req.body);
@@ -49,17 +48,19 @@ const UsersController = {
   Validate: (method) => {
     switch (method) {
       case "Create": {
-        // console.log("Case create is running");
-        // console.log(body("name"));
         return [
-          // todo: try removing 'en-US'
-          body(["name", "name field is filled in and is numeric"])
+          body(
+            "name",
+            "Error: Name should not include numbers or special characters, other than '-' and spaces."
+          )
             .exists()
-            .isNumeric(),
-          // // .isAlpha("en-US", { ignore: " -" }),
-          // body("email", "invalid email").exists().isEmail(),
-          // // todo: fine tune how we want passwords to be...
-          // body("password", "password does not meet requirements").exists(),
+            // todo: allow accented characters
+            .isAlpha("en-US", { ignore: " -" }),
+          body("email", "Error: Invalid email, you dummy.").exists().isEmail(),
+          // todo: fine tune how we want passwords to be...
+          body("password", "password does not meet requirements")
+            .exists()
+            .isLength({ min: 5 }),
         ];
       }
     }
