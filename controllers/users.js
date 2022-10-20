@@ -1,4 +1,19 @@
 const User = require("../models/user");
+const { body } = require('express-validator/check');
+
+const validate = (method) => {
+  switch (method) {
+    case 'Create': {
+      return [
+        // todo: try removing 'en-US'
+        body('name','name field is empty').exists().isAlpha('en-US', {ignore: ' -'}),
+        body('email','invalid email').exists().isEmail(),
+        // todo: fine tune how we want passwords to be...
+        body('password','password does not meet requirements').exists(),
+      ]
+    }
+  }
+}
 
 const UsersController = {
   Index: (req, res) => {
@@ -37,4 +52,9 @@ const UsersController = {
   },
 };
 
-module.exports = UsersController;
+module.exports = {
+  UsersController,
+  validate
+};
+// module.exports = UsersController;
+// module.exports = validator;
