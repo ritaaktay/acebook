@@ -1,10 +1,51 @@
 <html>
   <head>
     <title>{{title}}</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    {{!-- <link rel="stylesheet" href="/stylesheets/style.css" /> --}}
+    {{!-- Latest compiled and minified CSS from Bootstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{!-- Latest compiled JavaScript from Bootstrap --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
-    <p>
+    
+    <nav class="navbar navbar-expand-md bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Acebook</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          {{#if session.user}}
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/posts/new">Make a post</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/settings">Settings</a>
+              </li>
+
+              <form action="/sessions?_method=DELETE" method="POST">
+                <input class="btn btn-primary" id="logout" type="submit" value="Log Out" />
+              </form>
+            </ul>
+
+          {{else}}
+            
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/sessions/new">Log in</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/users/new">Sign up</a>
+              </li>
+            </ul>
+          {{/if}}
+        </div>
+      </div>
+    </nav>
+
+    {{!-- <p>
       <a href="/posts">Acebook</a>
       {{! redirects to log-in if not logged in}}
       {{! https://handlebarsjs.com/guide/builtin-helpers.html }}
@@ -18,7 +59,7 @@
         <a href="/sessions/new">Log-in</a>
         <a href="/users/new">Sign-up</a>
       {{/if}}
-    </p>
+    </p> --}}
     {{{body}}}
   </body>
 </html>
