@@ -40,6 +40,7 @@
                 {{! all comments }}
                 <div class="comments">
                   <h5>Comments</h5>
+                  {{!-- form to submit a comment --}}
                   <form class="comment-form row" action="/posts/comments" method="post">
                     <input class="postid" type="hidden" value={{this._id}} name="postid" />
                     <div class="col-8">
@@ -50,6 +51,7 @@
                     </div>
                   </form>
                   <br>
+                  {{!-- display all comments --}}
                   {{#each this.comments}}
                     <div class="card">
                       <div class="card-body">

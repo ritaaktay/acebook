@@ -1,12 +1,13 @@
 <div class="container text-center">
   <div class="row">
+    <div class="alert alert-primary" role="alert">
+        Hello, {{user.name}}!
+    </div>
     <div class="col">
     </div>
     <div class="col-10">
 
-      <div class="alert alert-primary" role="alert">
-        Hello, {{user.name}}!
-      </div>
+      
       
       <ul id="user" class="user">
       <div class="card mb-3">
@@ -32,6 +33,7 @@
                       class="form-control"
                       name="uploadedImage"
                     />
+                    <br>
                     <input
                       id="upload-file"
                       type="submit"
@@ -52,40 +54,46 @@
   </div>
 </div>
 
-{{#if hasFriendRequests}}
-<div id="friend-requests">Your friends requests:
-  {{#each user.friendRequests}}
-    <ul>
-      <li>
-        <img
-          class="friend-req-proile-iamge"
-          src="{{formatImage this.image.contentType this.image.data}}"
-        />
-      </li>
-      <li class="friend-req-name">{{this.name}}</li>
-      <li class="friend-req-accept">
-        <form action="/friends/accept" method="post">
-          <input
-            class="requester-id"
-            type="hidden"
-            name="requester"
-            value={{this._id}}
+<div class="card mx-auto">
+  {{#if hasFriendRequests}}
+  <h5 class="text-center">Your friends requests from:</h5>
+  <div id="friend-requests" class="card-body">
+    {{#each user.friendRequests}}
+      <ul>
+        <div class="col">
+          <img
+            class="friend-req-proile-iamge"
+            src="{{formatImage this.image.contentType this.image.data}}"
           />
-          <input class="accept-button" type="submit" value="Accept" />
-        </form>
-      </li>
-      <li class="friend-req-decline">
-        <form action="/friends/decline" method="post">
-          <input
-            class="requester-id"
-            type="hidden"
-            name="requester"
-            value={{this._id}}
-          />
-          <input class="decline-button" type="submit" value="Decline" />
-        </form>
-      </li>
-    </ul>
-  {{/each}}
-{{/if}}
+        </div>
+        <div class="col-10">
+          <div class="friend-req-name">{{this.name}}</div>
+          <div class="friend-req-accept">
+            <form action="/friends/accept" method="post">
+              <input
+                class="requester-id"
+                type="hidden"
+                name="requester"
+                value={{this._id}}
+              />
+              <input class="accept-button" type="submit" value="Accept" />
+            </form>
+          </div>
+          <div class="friend-req-decline">
+            <form action="/friends/decline" method="post">
+              <input
+                class="requester-id"
+                type="hidden"
+                name="requester"
+                value={{this._id}}
+              />
+              <input class="decline-button" type="submit" value="Decline" />
+            </form>
+          </div>
+        </div>
+        <div class="col"></div>
+      </ul>
+    {{/each}}
+  {{/if}}
+  </div>
 </div>
