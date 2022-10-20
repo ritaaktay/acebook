@@ -52,6 +52,7 @@
   </div>
 </div>
 
+{{#if hasFriendRequests}}
 <div id="friend-requests">Your friends requests:
   {{#each user.friendRequests}}
     <ul>
@@ -81,9 +82,10 @@
             name="requester"
             value={{this._id}}
           />
-          <input class="accept-button" type="submit" value="Decline" />
+          <input class="decline-button" type="submit" value="Decline" />
         </form>
       </li>
     </ul>
   {{/each}}
+{{/if}}
 </div>
