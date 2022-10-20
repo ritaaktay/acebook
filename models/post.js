@@ -12,9 +12,13 @@ const PostSchema = new mongoose.Schema({
     ref: "User",
     required: true,
   },
-  like: {
-    type: [String],
-  },
+  likes: [
+    {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "User",
+      required: true,
+    },
+  ],
   comments: [{ type: mongoose.SchemaTypes.ObjectId, ref: "Comment" }],
   image: {
     data: Buffer,
