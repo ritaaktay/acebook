@@ -1,16 +1,23 @@
-<form
+<h1 class="text-center">Make a post</h1>
+<div class="card">
+  <form
   id="new-post-form"
   action="/posts"
   enctype="multipart/form-data"
   method="post"
->
-  <label for="message">Message: </label>
-  <input id="message" type="text" name="message" class="form-control" />
-  <input
-    id="post-image"
-    type="file"
-    name="uploadedImage"
-    class="form-control-file"
-  />
-  <input id="submit" type="submit" value="Submit" class="btn btn-default" />
-</form>
+  >
+    <div class="mb-3">
+      <label for="message">Message: </label>
+      <input id="message" type="text" name="message" class="form-control" placeholder="What's in your mind today..."/>
+    </div>
+    <div class="mb-3">
+      <input
+      id="post-image"
+      type="file"
+      name="uploadedImage"
+      class="form-control-file"
+      />
+      <input id="submit" type="submit" value="Submit" class="btn btn-primary" />
+    </div>
+  </form>
+</div>

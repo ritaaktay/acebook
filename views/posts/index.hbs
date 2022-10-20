@@ -1,94 +1,89 @@
-<h1>Timeline</h1>
+<h1 class="text-center">Timeline</h1>
 {{! all posts }}
-<div class="container">
-  <div class="row">
-    <div class="col">
-    </div>
-    <div class="col-6 posts">
-      {{#each posts}}
-        {{! a post }}
-        <div class="card">
-          <div class="card-body">
-            <div class="container">
-              <div class="row align-items-start">
-                <div class="col-1">
-                  <img
-                  class="author-post-image rounded float-start"
-                  src="{{formatImage
-                    this.author.image.contentType
-                    this.author.image.data
-                  }}"
-                  />
+<div class="posts">
+  {{#each posts}}
+    {{! a post }}
+    <div class="card">
+      <div class="card-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-1">
+              <img
+              class="author-post-image rounded"
+              src="{{formatImage
+                this.author.image.contentType
+                this.author.image.data
+              }}"
+              />
+            </div>
+            <div class="col-11">
+              <ul id={{this._id}} class="post">
+                {{#if this.message}}
+                  <h5 class="card-title post-content">{{this.message}}</h5>
+                {{/if}}
+                {{#if this.image.data}}
+                  <div><img
+                      class="post-image"
+                      src="{{formatImage this.image.contentType this.image.data}}"
+                    /></div>
+                  <br>
+                {{/if}}
+                <h6 class="card-subtitle mb-2 text-muted post-author post-date">By <a href="/users/{{this.author._id}}"> {{this.author.name}}</a> on {{formatDate this.createdAt}}</h6>
+                <div class="likeCount"> 
+                  <form class="like" action="/posts/like" method="post">
+                    <label>{{formatLikesNumber this.like.length}}</label>
+                    <input class="postid" type="hidden" value={{this._id}} name="postid" />
+                    <input class="submit btn btn-outline-primary" style="--bs-btn-padding-y: .10rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 0.85rem;" type="submit" value="like" />
+                  </form>
                 </div>
-                <div class="col-11">
-                  <ul id={{this._id}} class="post">
-                    {{#if this.message}}
-                      <h5 class="card-title post-content">{{this.message}}</h5>
-                    {{/if}}
-                    {{#if this.image.data}}
-                      <li><img
-                          class="post-image"
-                          src="{{formatImage this.image.contentType this.image.data}}"
-                        /></li>
-                    {{/if}}
-                    <h6 class="card-subtitle mb-2 text-muted post-author post-date">By <a href="/users/{{this.author._id}}"> {{this.author.name}}</a> on {{formatDate this.createdAt}}</h6>
-                    <div class="likeCount"> 
-                      <form class="like" action="/posts/like" method="post">
-                        <label>{{formatLikesNumber this.like.length}}</label>
-                        <input class="postid" type="hidden" value={{this._id}} name="postid" />
-                        <input class="submit btn btn-outline-primary" type="submit" value="like" />
-                      </form>
+                <br>
+                {{! all comments }}
+                <div class="comments">
+                  <h5>Comments</h5>
+                  <form class="comment-form row" action="/posts/comments" method="post">
+                    <input class="postid" type="hidden" value={{this._id}} name="postid" />
+                    <div class="col-8">
+                      <input class="comment-input form-control" name="content" required />
                     </div>
-                    {{! all comments }}
-                    <div class="comments">
-                      <p>Comments</p>
-                      <form class="comment-form row" action="/posts/comments" method="post">
-                        <input class="postid" type="hidden" value={{this._id}} name="postid" />
-                        <div class="col-8">
-                          <input class="comment-input form-control" name="content" required />
-                        </div>
-                        <div class="col-4">
-                          <input class="submit-comment btn btn-outline-primary" type="submit" value="comment" />
-                        </div>
-                      </form>
-                      {{#each this.comments}}
-                        <div class="card">
-                          <div class="card-body">
-                            <div class="container">
-                              <div class="row align-items-start">
-                                <div class="col-1">
-                                  <img
-                                  class="author-comment-image"
-                                  src="{{formatImage
-                                    this.author.image.contentType
-                                    this.author.image.data
-                                  }}"
-                                />
-                                </div>
-                                <div class="col-11">
-                                  <ul id={{this.id}}    class="comment">
-                                    <div class="comment-content">{{this.message}}</div>
-                                    <div class="comment-author comment-date text-muted">By <a href="/users/{{this.author._id}}"> {{this.author.name}}</a> on {{formatDate this.createdAt}}</div>
-                                  </ul>
-                                </div>
-                              </div>
+                    <div class="col-4">
+                      <input class="submit-comment btn btn-outline-primary" type="submit" value="comment" />
+                    </div>
+                  </form>
+                  <br>
+                  {{#each this.comments}}
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="container">
+                          <div class="row align-items-start">
+                            <div class="col-1">
+                              <img
+                              class="author-comment-image"
+                              src="{{formatImage
+                                this.author.image.contentType
+                                this.author.image.data
+                              }}"
+                            />
+                            </div>
+                            <div class="col-11">
+                              <ul id={{this.id}}    class="comment">
+                                <div class="comment-content">{{this.message}}</div>
+                                <div class="comment-author comment-date text-muted">By <a href="/users/{{this.author._id}}"> {{this.author.name}}</a> on {{formatDate this.createdAt}}</div>
+                              </ul>
                             </div>
                           </div>
                         </div>
-                        <p></p>
-                      {{/each}}
                       </div>
                     </div>
-                  </ul>
+                    <p></p>
+                  {{/each}}
+                  </div>
                 </div>
-              </div>
+              </ul>
             </div>
           </div>
         </div>
-        <br>
-      {{/each}}
+      </div>
     </div>
-    <div class="col">
-    </div>
-  </div>
+    <p></p>
+  {{/each}}
 </div>
