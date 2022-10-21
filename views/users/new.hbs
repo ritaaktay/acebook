@@ -3,6 +3,11 @@
     <div class="col">
     </div>
     <div class="col">
+      {{#if message}}
+        <div class="alert alert-warning" id="message" role="alert">
+          {{message}}
+        </div>
+      {{/if}}
       <form id="new-user-form" action="/users" method="post">
       <div class="mb-3">
           <label for="name" class="form-label" value="">Name</label>

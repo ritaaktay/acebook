@@ -24,3 +24,9 @@ beforeEach(() => {
   cy.task("emptyUsers");
   cy.task("emptyComments");
 });
+
+afterEach(() => {
+  cy.task("emptyPosts");
+  cy.task("emptyUsers");
+  cy.task("emptyComments");
+});
