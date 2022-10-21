@@ -1,4 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&section=header&text=PROJECT:%20Acebook&fontSize=90&animation=fadeIn)
+<div align = "center">
+  Heroku APP: https://dmeowbook.herokuapp.com/
+</div>
+
 # Tech Stack
 ### IDE
 <div align="left">
@@ -149,12 +153,16 @@ Bearing in mind the EQ learning we’ve done with Dana and elsewhere, we want to
 
 # Links
 1. [Google roles/resources](https://docs.google.com/spreadsheets/d/12W1ienkAIuIkCsyAgThxA8Il0xyo6a_CqvdKLII3vVM/edit#gid=0)
-
 2. [PRICELESS Team Charter](https://docs.google.com/document/d/1HTROMSwpUmOsYUq2swAS2mSMkS3TAfPNtpU5f4j5J1g/edit)
 3. [Team Member Roles](https://docs.google.com/document/d/16YMbgkPV1y3mP5z5rGexmKgbBvklUsb_bDbgFJKngCs/edit)
 4. [Github forked repo](https://github.com/oahciy/acebook-priceless)
 5. [Github Makers master/main repo](https://github.com/makersacademy/acebook-node-template)
 6. [Miro board](https://miro.com/app/board/uXjVPPd0XIc=/)
 7. [Trello board](https://trello.com/b/nq40fIRV/acebook)
+8. [Team Retro Board](https://easyretro.io/publicboard/yvO9jlUVtuWCUyEwCJjKGjwojn63/6d985c2d-55e7-45af-8893-89923c01440a)
+
+
+# Week 8 Links
+1. [Week 8 Retro board](https://easyretro.io/publicboard/hhuaxOoL3ghkUR8MYF3WU8oCgOt2/7a1d8adc-0f3a-4973-9eb2-d789559eb3c5?list=false)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer)
