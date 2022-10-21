@@ -54,46 +54,50 @@
   </div>
 </div>
 
-<div class="card mx-auto">
-  {{#if hasFriendRequests}}
-  <h5 class="text-center">Your friends requests from:</h5>
-  <div id="friend-requests" class="card-body">
-    {{#each user.friendRequests}}
-      <ul>
-        <div class="col">
-          <img
-            class="friend-req-proile-iamge"
-            src="{{formatImage this.image.contentType this.image.data}}"
-          />
-        </div>
-        <div class="col-10">
-          <div class="friend-req-name">{{this.name}}</div>
-          <div class="friend-req-accept">
-            <form action="/friends/accept" method="post">
-              <input
-                class="requester-id"
-                type="hidden"
-                name="requester"
-                value={{this._id}}
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-10 text-center">
+      {{#if hasFriendRequests}}
+      <h5 class="text-center">Your friends requests from:</h5>
+        <div class="row text-center">
+          {{#each user.friendRequests}}
+            <div class="card" style="width: 16rem;">
+              <img
+                  class="friend-req-proile-iamge"
+                  src="{{formatImage this.image.contentType this.image.data}}"
               />
-              <input class="accept-button" type="submit" value="Accept" />
-            </form>
-          </div>
-          <div class="friend-req-decline">
-            <form action="/friends/decline" method="post">
-              <input
-                class="requester-id"
-                type="hidden"
-                name="requester"
-                value={{this._id}}
-              />
-              <input class="decline-button" type="submit" value="Decline" />
-            </form>
-          </div>
+              <div class="card-body text-center">
+                <h5 class="card-title friend-req-name">{{this.name}}</h5>
+                <form action="/friends/accept" method="post" class="friend-req-accept">
+                  <input
+                    class="requester-id"
+                    type="hidden"
+                    name="requester"
+                    value={{this._id}}
+                  />
+                  <input class="accept-button btn btn-primary" type="submit" value="Accept" />
+                </form>
+                <p></p>
+                <form action="/friends/decline" method="post" class="friend-req-decline">
+                  <input
+                    class="requester-id"
+                    type="hidden"
+                    name="requester"
+                    value={{this._id}}
+                  />
+                  <input class="decline-button btn btn-primary" type="submit" value="Decline" />
+                </form>
+
+              </div>
+            </div>
+            <p></p>
+          {{/each}}
         </div>
-        <div class="col"></div>
-      </ul>
-    {{/each}}
-  {{/if}}
+      {{/if}}
+    </div>
+    <div class="col">
+    </div>
   </div>
 </div>
