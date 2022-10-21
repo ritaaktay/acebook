@@ -40,9 +40,9 @@ const UsersController = {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
-      return res
-        .status(422)
-        .render("error", { message: JSON.stringify(errors.array()[0].msg) });
+      return res.status(422).render("users/new", {
+        message: JSON.stringify(errors.array()[0].msg).replaceAll('"', ""),
+      });
     }
 
     const user = new User(req.body);
@@ -65,14 +65,19 @@ const UsersController = {
         return [
           body(
             "name",
-            "Error: Name should not include numbers or special characters, other than '-' and spaces."
+            "Error: Name should not include numbers or special characters, other than '-' and spaces. Try again!"
           )
             .exists()
             // todo: allow accented characters
             .isAlpha("en-US", { ignore: " -" }),
-          body("email", "Error: Invalid email, you dummy.").exists().isEmail(),
+          body("email", "Error: Invalid email, you dummy. Try again!")
+            .exists()
+            .isEmail(),
           // todo: fine tune how we want passwords to be...
-          body("password", "password does not meet requirements")
+          body(
+            "password",
+            "Error: Password does not meet requirements. Try again!"
+          )
             .exists()
             .isLength({ min: 5 }),
         ];
