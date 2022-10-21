@@ -1,8 +1,6 @@
 ![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=PROJECT%20Acebook&fontSize=90)
 
-<p align="left">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
-</p>
+
 
 # PROJECT: Acebook
 ## Tech Stack
@@ -60,4 +58,6 @@
 #### Unit Tests
 
 
-![footer](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=footer)
+<p align="left">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
+</p>
