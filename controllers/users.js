@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const { body, validationResult } = require("express-validator");
 
 const UsersController = {
   Index: (req, res) => {
@@ -39,6 +40,14 @@ const UsersController = {
   },
 
   Create: (req, res) => {
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(422).render("users/new", {
+        message: errors.array()[0].msg,
+      });
+    }
+
     const user = new User(req.body);
     user.save((err) => {
       if (err) {
@@ -51,6 +60,32 @@ const UsersController = {
       }
       res.status(201).redirect("/posts");
     });
+  },
+
+  Validate: (method) => {
+    switch (method) {
+      case "Create": {
+        return [
+          body(
+            "name",
+            "Error: Name should not include numbers or special characters, other than '-' and spaces. Try again!"
+          )
+            .exists()
+            // todo: allow accented characters
+            .isAlpha("en-US", { ignore: " -" }),
+          body("email", "Error: Invalid email, you dummy. Try again!")
+            .exists()
+            .isEmail(),
+          // todo: fine tune how we want passwords to be...
+          body(
+            "password",
+            "Error: Password does not meet requirements. Try again!"
+          )
+            .exists()
+            .isLength({ min: 5 }),
+        ];
+      }
+    }
   },
 };
 
