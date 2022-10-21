@@ -11,8 +11,6 @@
   <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white"/>
   <img src="https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white"/>
 </div>
-
-### Languages
 <div align="left">
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
@@ -78,6 +76,7 @@ Bearing in mind the EQ learning we’ve done with Dana and elsewhere, we want to
     - Leader        
         - Makes sure that everyone is working on the right tasks
         - Makes sure everyone is working well together
+<br>
 
 2. ✍🏽**Scribe + Reporter/Helper**
     - Scribe + Reporter
@@ -87,49 +86,55 @@ Bearing in mind the EQ learning we’ve done with Dana and elsewhere, we want to
         - Looks out for members who have taken on too much as well as members who don’t have enough to do
         - Looks out for the health of other members, ensures they’re taking breaks
         - Finds ways to keep team motivation up and makes sure successes are celebrated
+<br>
 
 3. 💡**Challenger + Ideas Person**
     - Tries to think of what might go wrong
     - Tries to think of alternative ideas to solve problems
     - Explains these ideas to the team
+<br>
 
 4. ⚙️**Technician**
     - Looks after the team’s tools and materials (github, etc.)
     - Makes sure everyone has the tools they need to do their job
+<br>
 
-Work Flows
-Pairing
-Pull latest version of main
-Check-out a new branch / existing branch for your ticket
-Work in branch, and keep committing upstream
-Merge latest main again before pull request to avoid merge conflicts
-Submit pull-request
-Move card on Trello
-Add PR link to card 
-Alert team on Slack
+5. **Work Flows**
+    - Pairing
+        - Pull latest version of main
+        - Check-out a new branch / existing branch for your ticket
+        - Work in branch, and keep committing upstream
+        - Merge latest main again before pull request to avoid merge conflicts
+        - Submit pull-request
+        - Move card on Trello
+        - Add PR link to card 
+        - Alert team on Slack
 
-Trello protocol
-If a pair is working on it, it has your name on it
-If it needs review, it has the reviewers name
-If it has been reviewed and needs updating, it is in the Updating column
-If you are the second reviewer and all is ok, accept & merge
+    - Trello protocol
+        - If a pair is working on it, it has your name on it
+        - If it needs review, it has the reviewers name
+        - If it has been reviewed and needs updating, it is in the Updating column
+        - If you are the second reviewer and all is ok, accept & merge
 
-During pairings, resolve challenges by:
-Debugging and stuck on a 1 hour+ blocker? ask for help!
-Need to chat about something? Write on Slack
-Need to know the answer now? Directly join a pair with whom you’d like to discuss an urgent issue.
-Cannot move on unless big issue is resolved as a team? Ask scrum master for help
+    - During pairings, resolve challenges by:
+        - Debugging and stuck on a 1 hour+ blocker? ask for help!
+        - Need to chat about something? Write on Slack
+        - Need to know the answer now? Directly join a pair with whom you’d like to discuss an urgent issue.
+        - Cannot move on unless big issue is resolved as a team? Ask scrum master for help
+<br>
 
- Stand-Up  
-Voice roles for the day
-Do any tasks need breaking down?
-Prioritise
-Estimate
-Sprint backlog
-Assign rand() pairs
- Retro 
-What did we think would happen, what actually happened?
-What went well, what could we do better tomorrow? 
+ 6. **Stand-Up**
+    - Voice roles for the day
+    - Do any tasks need breaking down?
+    - Prioritise
+    - Estimate
+    - Sprint backlog
+    - Assign rand() pairs
+<br>
+
+7. **Retro**
+    - What did we think would happen, what actually happened?
+    - What went well, what could we do better tomorrow? 
 
 
 
