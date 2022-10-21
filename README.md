@@ -1,5 +1,4 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=PROJECT:%20Acebook&fontSize=90&animation=fadeIn)
-
 ## Tech Stack
 ### IDE
 <div align="left">
