@@ -3,13 +3,13 @@ describe("Comments", () => {
     // sign up
     cy.visit("/users/new");
     cy.get("#name").type("someone");
-    cy.get("#email").type("someone6@example.com");
+    cy.get("#email").type("someone1@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
     // sign in
     cy.visit("/sessions/new");
-    cy.get("#email").type("someone6@example.com");
+    cy.get("#email").type("someone1@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
@@ -29,19 +29,19 @@ describe("Comments", () => {
   it("users can submit and view multiple comments", () => {
     // sign up
     cy.visit("/users/new");
-    cy.get("#name").type("someone");
+    cy.get("#name").type("someone eight");
     cy.get("#email").type("someone8@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
     // sign up
     cy.visit("/users/new");
-    cy.get("#name").type("someone2");
+    cy.get("#name").type("someone nine");
     cy.get("#email").type("someone9@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
-    // sign in as someone
+    // sign in as someone eight
     cy.visit("/sessions/new");
     cy.get("#email").type("someone8@example.com");
     cy.get("#password").type("password");
@@ -82,7 +82,7 @@ describe("Comments", () => {
     //log-out
     cy.get("#logout").click();
 
-    //sign in as someone2
+    //sign in as someone nine
     cy.get("#email").type("someone9@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
@@ -106,8 +106,13 @@ describe("Comments", () => {
       });
 
     //expect post authors to match
-    cy.get(".post:first").find(".post-author").should("contain", "someone");
-    cy.get(".post").eq(1).find(".post-author").should("contain", "someone");
+    cy.get(".post:first")
+      .find(".post-author")
+      .should("contain", "someone eight");
+    cy.get(".post")
+      .eq(1)
+      .find(".post-author")
+      .should("contain", "someone eight");
 
     //expect two comments for first post
     cy.get(".post:first")
@@ -126,7 +131,7 @@ describe("Comments", () => {
               "contain",
               "Another comment"
             );
-            cy.get(".comment-author:first").should("contain", "someone2");
+            cy.get(".comment-author:first").should("contain", "someone nine");
           });
       });
 
@@ -140,7 +145,7 @@ describe("Comments", () => {
             "contain",
             "Comment on second post"
           );
-          cy.get(".comment-author:first").should("contain", "someone2");
+          cy.get(".comment-author:first").should("contain", "someone nine");
         });
       });
   });
