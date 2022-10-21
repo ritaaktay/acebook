@@ -1,5 +1,5 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=200&section=header&text=PROJECT:%20Acebook&fontSize=90&animation=fadeIn)
-## Tech Stack
+# Tech Stack
 ### IDE
 <div align="left">
   <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"/>
@@ -38,22 +38,24 @@
 </div>
 
 
-## TEAM: Priceless
-![44jovi's GitHub stats](https://github-readme-stats.vercel.app/api?username=44jovi&&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![ddrmv's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddrmv&count_private=true&show_icons=true&include_all_commits=true&card_width=300px)
+# TEAM: Priceless
+![ddrmv's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddrmv&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![G-Redos's GitHub stats](https://github-readme-stats.vercel.app/api?username=G-Redos&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
 
-![G-Redos's GitHub stats](https://github-readme-stats.vercel.app/api?username=G-Redos&count_private=true&show_icons=true&include_all_commits=true&card_width=325px) ![MarinaIvanova-1 's GitHub stats](https://github-readme-stats.vercel.app/api?username=MarinaIvanova-1&count_private=true&show_icons=true&include_all_commits=true&card_width=300px)
+![44jovi's GitHub stats](https://github-readme-stats.vercel.app/api?username=44jovi&&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![MarinaIvanova-1 's GitHub stats](https://github-readme-stats.vercel.app/api?username=MarinaIvanova-1&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) 
 
-![oahciy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oahciy&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![ritaaktay 's GitHub stats](https://github-readme-stats.vercel.app/api?username=ritaaktay&count_private=true&show_icons=true&include_all_commits=true&card_width=300px)
+![ritaaktay 's GitHub stats](https://github-readme-stats.vercel.app/api?username=ritaaktay&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![oahciy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oahciy&count_private=true&show_icons=true&include_all_commits=true&card_width=300px)
+ 
 
 # Team Charter
 
 
-## Test Coverage
 
 
-#### Unit Tests
 
 
-<p align="left">
+
+
+
+<div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
-</p>
+</div>
