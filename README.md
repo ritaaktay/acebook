@@ -148,12 +148,13 @@ Bearing in mind the EQ learning we’ve done with Dana and elsewhere, we want to
 ![alt text](https://i.ibb.co/HpQndR3/Untitled-2022-10-19-1217-2.png)
 
 # Links
-1. Google roles/resources: https://docs.google.com/spreadsheets/d/12W1ienkAIuIkCsyAgThxA8Il0xyo6a_CqvdKLII3vVM/edit#gid=0
-2. PRICELESS Team Charter: https://docs.google.com/document/d/1HTROMSwpUmOsYUq2swAS2mSMkS3TAfPNtpU5f4j5J1g/edit
-3. Team Member Roles: https://docs.google.com/document/d/16YMbgkPV1y3mP5z5rGexmKgbBvklUsb_bDbgFJKngCs/edit
-4. Github forked repo: https://github.com/oahciy/acebook-priceless
-5. Github Makers master/main repo: https://github.com/makersacademy/acebook-node-template
-6. Miro board: https://miro.com/app/board/uXjVPPd0XIc=/
-7. Trello board: https://trello.com/b/nq40fIRV/acebook
+1. [Google roles/resources](https://docs.google.com/spreadsheets/d/12W1ienkAIuIkCsyAgThxA8Il0xyo6a_CqvdKLII3vVM/edit#gid=0)
+
+2. [PRICELESS Team Charter](https://docs.google.com/document/d/1HTROMSwpUmOsYUq2swAS2mSMkS3TAfPNtpU5f4j5J1g/edit)
+3. [Team Member Roles](https://docs.google.com/document/d/16YMbgkPV1y3mP5z5rGexmKgbBvklUsb_bDbgFJKngCs/edit)
+4. [Github forked repo](https://github.com/oahciy/acebook-priceless)
+5. [Github Makers master/main repo](https://github.com/makersacademy/acebook-node-template)
+6. [Miro board](https://miro.com/app/board/uXjVPPd0XIc=/)
+7. [Trello board](https://trello.com/b/nq40fIRV/acebook)
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer)
