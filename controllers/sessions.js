@@ -11,7 +11,7 @@ const SessionsController = {
 
     if (!errors.isEmpty()) {
       return res.status(422).render("sessions/new", {
-        message: JSON.stringify(errors.array()[0].msg).replaceAll('"', ""),
+        message: errors.array()[0].msg,
       });
     }
 

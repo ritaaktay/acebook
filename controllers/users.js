@@ -44,7 +44,7 @@ const UsersController = {
 
     if (!errors.isEmpty()) {
       return res.status(422).render("users/new", {
-        message: JSON.stringify(errors.array()[0].msg).replaceAll('"', ""),
+        message: errors.array()[0].msg,
       });
     }
 
