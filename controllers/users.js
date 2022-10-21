@@ -28,6 +28,9 @@ const UsersController = {
           isPending: isPending,
           isNotOwnProfile: isNotOwnProfile,
         });
+      })
+      .catch((err) => {
+        res.render("error", { message: "This user does not exist" });
       });
   },
 
