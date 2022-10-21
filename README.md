@@ -1,10 +1,10 @@
 # PROJECT: Acebook
 ## TEAM: Priceless
-![44jovi's GitHub stats](https://github-readme-stats.vercel.app/api?username=44jovi&&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)![ddrmv's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddrmv&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
+![44jovi's GitHub stats](https://github-readme-stats.vercel.app/api?username=44jovi&&count_private=true&show_icons=true&include_all_commits=true&card_width=325px) ![ddrmv's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddrmv&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
 
-![G-Redos's GitHub stats](https://github-readme-stats.vercel.app/api?username=G-Redos&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)![MarinaIvanova-1 's GitHub stats](https://github-readme-stats.vercel.app/api?username=MarinaIvanova-1&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
+![G-Redos's GitHub stats](https://github-readme-stats.vercel.app/api?username=G-Redos&count_private=true&show_icons=true&include_all_commits=true&card_width=325px) ![MarinaIvanova-1 's GitHub stats](https://github-readme-stats.vercel.app/api?username=MarinaIvanova-1&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
 
-![oahciy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oahciy&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)![ritaaktay 's GitHub stats](https://github-readme-stats.vercel.app/api?username=ritaaktay&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
+![oahciy's GitHub stats](https://github-readme-stats.vercel.app/api?username=oahciy&count_private=true&show_icons=true&include_all_commits=true&card_width=325px) ![ritaaktay 's GitHub stats](https://github-readme-stats.vercel.app/api?username=ritaaktay&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
 
 # Tech Stack
 ### IDE
