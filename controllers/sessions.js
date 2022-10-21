@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const { body, validationResult } = require("express-validator");
 
 const SessionsController = {
   New: (req, res) => {
@@ -6,7 +7,14 @@ const SessionsController = {
   },
 
   Create: (req, res) => {
-    console.log("trying to log in");
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      return res.status(422).render("sessions/new", {
+        message: errors.array()[0].msg,
+      });
+    }
+
     const email = req.body.email;
     const password = req.body.password;
 
@@ -32,6 +40,19 @@ const SessionsController = {
       res.clearCookie("user_sid");
     }
     res.redirect("/sessions/new");
+  },
+
+  Validate: (method) => {
+    switch (method) {
+      case "Create": {
+        return [
+          body("email", "Error: Invalid email, you dummy. Try again!")
+            .exists()
+            .isEmail(),
+          // todo: add validation for password input once implemented on UsersController
+        ];
+      }
+    }
   },
 };
 

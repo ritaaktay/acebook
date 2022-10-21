@@ -6,6 +6,7 @@ const logger = require("morgan");
 const session = require("express-session");
 const methodOverride = require("method-override");
 const hbs = require("hbs");
+const bodyParser = require("body-parser");
 
 const homeRouter = require("./routes/home");
 const postsRouter = require("./routes/posts");
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(methodOverride("_method"));
+app.use(bodyParser.json());
 
 app.use(
   session({

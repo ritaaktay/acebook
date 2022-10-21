@@ -2,14 +2,14 @@ describe("Timeline", () => {
   it("cannot like their own posts", () => {
     // sign up
     cy.visit("/users/new");
-    cy.get("#name").type("someone4");
-    cy.get("#email").type("someone4@example.com");
+    cy.get("#name").type("someone");
+    cy.get("#email").type("someone@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
     // sign in
     cy.visit("/sessions/new");
-    cy.get("#email").type("someone4@example.com");
+    cy.get("#email").type("someone@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
@@ -31,14 +31,14 @@ describe("Timeline", () => {
   it("cannot like a post twice", () => {
     // sign up
     cy.visit("/users/new");
-    cy.get("#name").type("someone4");
-    cy.get("#email").type("someone4@example.com");
+    cy.get("#name").type("someone");
+    cy.get("#email").type("someone@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
     // sign in
     cy.visit("/sessions/new");
-    cy.get("#email").type("someone4@example.com");
+    cy.get("#email").type("someone@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
 
@@ -55,7 +55,7 @@ describe("Timeline", () => {
 
     // sign up
     cy.visit("/users/new");
-    cy.get("#name").type("someone5");
+    cy.get("#name").type("someone five");
     cy.get("#email").type("someone5@example.com");
     cy.get("#password").type("password");
     cy.get("#submit").click();
