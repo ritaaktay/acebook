@@ -140,15 +140,12 @@ Bearing in mind the EQ learning we’ve done with Dana and elsewhere, we want to
 7. **Retro**
     - What did we think would happen, what actually happened?
     - What went well, what could we do better tomorrow? 
- 
+<br>
+
 # Design
+![alt text](https://i.ibb.co/zst63k3/Screenshot-2022-10-19-at-15-57-19.png)
 
-https://files.slack.com/files-pri/T03ALA7H4-F046ZCYU6QN/untitled-2022-10-19-1217-2.png
-
-![alt text]("image.jpg)https://files.slack.com/files-pri/T03ALA7H4-F0479P40SDS/screenshot_2022-10-19_at_15.57.19.png")
-
-
-
+![alt text](https://i.ibb.co/HpQndR3/Untitled-2022-10-19-1217-2.png)
 
 # Links
 1. Google roles/resources: https://docs.google.com/spreadsheets/d/12W1ienkAIuIkCsyAgThxA8Il0xyo6a_CqvdKLII3vVM/edit#gid=0
@@ -158,7 +155,5 @@ https://files.slack.com/files-pri/T03ALA7H4-F046ZCYU6QN/untitled-2022-10-19-1217
 5. Github Makers master/main repo: https://github.com/makersacademy/acebook-node-template
 6. Miro board: https://miro.com/app/board/uXjVPPd0XIc=/
 7. Trello board: https://trello.com/b/nq40fIRV/acebook
-
-
 
 ![footer](https://capsule-render.vercel.app/api?type=waving&color=auto&height=100&section=footer)
