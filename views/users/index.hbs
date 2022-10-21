@@ -25,7 +25,9 @@
       </form>
     {{/if}}
   {{/if}}
-  {{#if hasFriends}}
+</div>
+
+{{!-- {{#if hasFriends}}
     <div id="friends">
       <h3>Friends</h3>
       {{#each user.friends}}
@@ -38,5 +40,38 @@
     </div>
   {{else}}
     <p>No friends have been added yet</p>
-  {{/if}}
+  {{/if}} --}}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-10 text-center" id="friends">
+      {{#if hasFriends}}
+      <br>
+      <h3 class="text-center">Friends</h3>
+      <br>
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+          {{#each user.friends}}
+            <div class="col">
+              <div class="card">
+                <img
+                    class="friend-profile-image card-img-top"
+                    src="{{formatImage this.image.contentType this.image.data}}"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title friend-name"><a href="/users/{{this._id}}">{{this.name}}</a></h5>
+                </div>
+              </div>
+              <p></p>
+            </div>
+          {{/each}}
+        </div>
+      {{else}}
+      <div class="alert alert-warning" role="alert">No friends have been added yet</div>
+      {{/if}}
+    </div>
+    <div class="col">
+    </div>
+  </div>
 </div>
