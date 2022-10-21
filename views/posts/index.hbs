@@ -25,10 +25,10 @@
           }}"
         /></li>
       <li class="post-date">On {{formatDate this.createdAt}}</li>
-      <li class="likeCount">{{formatLikesNumber this.like.length}}</li>
+      <li class="likeCount">{{formatLikesNumber this.likes.length}}</li>
       <form class="like" action="/posts/like" method="post">
-        <input class="postid" type="hidden" value={{this._id}} name="postid" />
-        <input class="submit" type="submit" value="like" />
+        <input class="postid" type="hidden" value={{this._id}} name="postid"/>
+        <input class="submit" type="submit" value="like" {{#if this.displayLike}}{{else}}disabled{{/if}}/>
       </form>
       {{! all comments }}
       <li class="comments">

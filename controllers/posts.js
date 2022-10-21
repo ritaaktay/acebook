@@ -8,6 +8,7 @@ const PostsController = {
     Post.find({})
       .sort([["createdAt", -1]])
       .populate("author")
+      .populate("likes")
       .populate({
         path: "comments",
         populate: { path: "author" },
@@ -16,7 +17,24 @@ const PostsController = {
         if (err) {
           throw err;
         }
-        res.render("posts/index", { posts: posts });
+        let postsWithInfo = [];
+        posts.forEach((post) => {
+          postWithInfo = {
+            ...post._doc,
+          };
+          const isNotLoggedInUsers =
+            req.session.user != null
+              ? post.author._id != req.session.user._id
+              : false;
+          const hasNotBeenLiked =
+            req.session.user != null
+              ? !post.likes.some((user) => user._id == req.session.user._id)
+              : false;
+          postWithInfo.displayLike = isNotLoggedInUsers && hasNotBeenLiked;
+          postsWithInfo.push(postWithInfo);
+        });
+        console.log(postsWithInfo);
+        res.render("posts/index", { posts: postsWithInfo });
       });
   },
   New: (req, res) => {
@@ -49,7 +67,7 @@ const PostsController = {
   Like: (req, res) => {
     Post.updateOne(
       { _id: req.body.postid },
-      { $addToSet: { like: req.session.user._id } }
+      { $addToSet: { likes: req.session.user._id } }
     ).exec((err) => {
       if (err) {
         throw err;

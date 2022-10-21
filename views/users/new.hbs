@@ -7,5 +7,6 @@
   <input id="password" type="password" name="password" value="" />
   <input id="submit" type="submit" value="Submit" />
 </form>
-
-<p>{{message}}</p>
+{{#if message}}
+  <p id="message">{{message}}</p>
+{{/if}}
