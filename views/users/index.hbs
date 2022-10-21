@@ -1,7 +1,8 @@
-<h1>Profile Page</h1>
-<div class="user">
+<h1 class="text-center">Profile Page</h1>
+<div class="user card text-center mx-auto" style="width: 18rem;">
   <img
     id="profile-image"
+    class="card-img-top"
     src="{{formatImage user.image.contentType user.image.data}}"
   />
   <h3 id="user-name">{{user.name}}</h3>
@@ -19,13 +20,14 @@
         {{else if isFriends}}
           <input id="already-friends-button" type="submit" value="You are friends with {{user.name}} 🎉" disabled>
         {{else}}
-          <input id="add-friend-button" type="submit" value="Add Friend" />
+          <input id="add-friend-button" class="btn btn-primary" type="submit" value="Add Friend" />
         {{/if}}
       </form>
-    </div>
     {{/if}}
   {{/if}}
-  {{#if hasFriends}}
+</div>
+
+{{!-- {{#if hasFriends}}
     <div id="friends">
       <h3>Friends</h3>
       {{#each user.friends}}
@@ -37,5 +39,39 @@
       {{/each}}
     </div>
   {{else}}
-    <p>No friends have been added yet.</p>
-  {{/if}}
+    <p>No friends have been added yet</p>
+  {{/if}} --}}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-10 text-center" id="friends">
+      {{#if hasFriends}}
+      <br>
+      <h3 class="text-center">Friends</h3>
+      <br>
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
+          {{#each user.friends}}
+            <div class="col">
+              <div class="card">
+                <img
+                    class="friend-profile-image card-img-top"
+                    src="{{formatImage this.image.contentType this.image.data}}"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title friend-name"><a href="/users/{{this._id}}">{{this.name}}</a></h5>
+                </div>
+              </div>
+              <p></p>
+            </div>
+          {{/each}}
+        </div>
+      {{else}}
+      <div class="alert alert-warning" role="alert" id="no-friend-alert">No friends have been added yet</div>
+      {{/if}}
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>

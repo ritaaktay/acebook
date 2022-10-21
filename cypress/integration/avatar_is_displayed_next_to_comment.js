@@ -34,7 +34,7 @@ describe("Timeline", () => {
     ).then((image) => {
       const src = `data:image/png;base64,${image}`;
       cy.get(".post:first")
-        .find(".comment:first")
+        // .find(".comment:first")
         .within(() => {
           cy.get(".author-comment-image").should("have.attr", "src", src);
         });

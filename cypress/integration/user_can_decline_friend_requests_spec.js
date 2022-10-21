@@ -82,6 +82,6 @@ describe("Friend Request", () => {
       });
 
     // check for Jane in friends
-    cy.get("#friends").should("not.exist");
+    cy.get("#no-friend-alert").should("contain", "No friends have been added yet");
   });
 });

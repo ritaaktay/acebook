@@ -1,65 +1,111 @@
-<h1>Settings</h1>
-<ul id="user" class="user">
-  <img
-    id="profile-image"
-    src="{{formatImage user.image.contentType user.image.data}}"
-  />
-  <li id="user-name"><a href="/users/{{user._id}}">{{user.name}}</a></li>
-  <li id="user-email">{{user.email}}</li>
-</ul>
+<div class="container text-center">
+  <div class="row">
+    <div class="alert alert-primary" role="alert">
+        Hello, {{user.name}}!
+    </div>
+    <div class="col">
+    </div>
+    <div class="col-10">
 
-<h3>Upload new image</h3>
-<form action="/settings" enctype="multipart/form-data" method="post">
-  <div class="form-group">
-    <input
-      id="choose-file"
-      type="file"
-      class="form-control-file"
-      name="uploadedImage"
-    />
-    <input
-      id="upload-file"
-      type="submit"
-      value="Upload"
-      class="btn btn-default"
-    />
+      
+      
+      <ul id="user" class="user">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img 
+              id="profile-image"
+              src="{{formatImage user.image.contentType user.image.data}}"
+              class="card-img-top"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 id="user-name" class="card-title">{{user.name}}</h5>
+              <h6 id="user-email" class="card-subtitle mb-2 text-muted">{{user.email}}</h6>
+              <div class="mb-3">
+                <form action="/settings" enctype="multipart/form-data" method="post">
+                  <div class="form-group">
+                    <label for="formFile" class="form-label">Upload new image</label>
+                    <input 
+                      id="choose-file"
+                      type="file"
+                      class="form-control"
+                      name="uploadedImage"
+                    />
+                    <br>
+                    <input
+                      id="upload-file"
+                      type="submit"
+                      value="Upload"
+                      class="btn btn-primary"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </ul>
+    </div>
+    <div class="col">
+    </div>
   </div>
-</form>
+</div>
 
-{{#if hasFriendRequests}}
-<div id="friend-requests">Your friends requests:
-  {{#each user.friendRequests}}
-    <ul>
-      <li>
-        <img
-          class="friend-req-proile-iamge"
-          src="{{formatImage this.image.contentType this.image.data}}"
-        />
-      </li>
-      <li class="friend-req-name">{{this.name}}</li>
-      <li class="friend-req-accept">
-        <form action="/friends/accept" method="post">
-          <input
-            class="requester-id"
-            type="hidden"
-            name="requester"
-            value={{this._id}}
-          />
-          <input class="accept-button" type="submit" value="Accept" />
-        </form>
-      </li>
-      <li class="friend-req-decline">
-        <form action="/friends/decline" method="post">
-          <input
-            class="requester-id"
-            type="hidden"
-            name="requester"
-            value={{this._id}}
-          />
-          <input class="decline-button" type="submit" value="Decline" />
-        </form>
-      </li>
-    </ul>
-  {{/each}}
-{{/if}}
+<div class="container">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-10 text-center">
+      {{#if hasFriendRequests}}
+      <h5 class="text-center">Your friends requests from:</h5>
+        <div class="row row-cols-1 row-cols-md-4 g-4 text-center" id="friend-requests">
+          {{#each user.friendRequests}}
+            <div class="col">
+              <div class="card">
+                <img
+                    class="friend-req-proile-iamge card-img-top"
+                    src="{{formatImage this.image.contentType this.image.data}}"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title friend-req-name">{{this.name}}</h5>
+                </div>
+                <div class="card-footer">
+                  <div class="row text-center">
+                    <div class="col text-center">
+                      <form action="/friends/accept" method="post" class="friend-req-accept">
+                        <input
+                          class="requester-id"
+                          type="hidden"
+                          name="requester"
+                          value={{this._id}}
+                        />
+                        <input class="accept-button btn btn-outline-primary" type="submit" value="Accept" />
+                      </form>
+                    </div>
+                    <div class="col text-center">
+                      <form action="/friends/decline" method="post" class="friend-req-decline">
+                        <input
+                          class="requester-id"
+                          type="hidden"
+                          name="requester"
+                          value={{this._id}}
+                        />
+                        <input class="decline-button btn btn-outline-danger" type="submit" value="Decline" />
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p></p>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+    <div class="col">
+    </div>
+  </div>
 </div>

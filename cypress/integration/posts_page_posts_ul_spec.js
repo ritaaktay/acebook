@@ -21,6 +21,6 @@ describe("Timeline", () => {
     cy.get("#message").type("Cypress test post!");
     cy.get("#submit").click();
 
-    cy.get(".post:first > li").should("have.length", "6");
+    cy.get(".post:first").find(".post-content").should("contain", "Cypress test post!");
   });
 });

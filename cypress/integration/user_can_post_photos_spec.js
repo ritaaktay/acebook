@@ -27,7 +27,7 @@ describe("Timeline", () => {
       .should("have.attr", "name", "uploadedImage");
     cy.get("#new-post-form")
       .find("#submit")
-      .should("have.class", "btn btn-default");
+      .should("have.class", "btn btn-primary");
   });
 
   it("can submit post with just photo", () => {
