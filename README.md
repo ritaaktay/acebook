@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white"/>
   <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white"/>
   <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25?style=for-the-badge&logo=GNU%20Bash&logoColor=white"/> 
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/> 
   <img src="https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettierlogoColor=F7BA3E"/>
   <img src="https://img.shields.io/badge/VIM-%2311AB00.svg?&style=for-the-badge&logo=vim&logoColor=white"/>
@@ -139,14 +140,24 @@ Bearing in mind the EQ learning we’ve done with Dana and elsewhere, we want to
 7. **Retro**
     - What did we think would happen, what actually happened?
     - What went well, what could we do better tomorrow? 
+ 
+# Design
+
+https://files.slack.com/files-pri/T03ALA7H4-F046ZCYU6QN/untitled-2022-10-19-1217-2.png
+
+![alt text]("image.jpg)https://files.slack.com/files-pri/T03ALA7H4-F0479P40SDS/screenshot_2022-10-19_at_15.57.19.png")
 
 
 
 
-
-
-
-
+# Links
+1. Google roles/resources: https://docs.google.com/spreadsheets/d/12W1ienkAIuIkCsyAgThxA8Il0xyo6a_CqvdKLII3vVM/edit#gid=0
+2. PRICELESS Team Charter: https://docs.google.com/document/d/1HTROMSwpUmOsYUq2swAS2mSMkS3TAfPNtpU5f4j5J1g/edit
+3. Team Member Roles: https://docs.google.com/document/d/16YMbgkPV1y3mP5z5rGexmKgbBvklUsb_bDbgFJKngCs/edit
+4. Github forked repo: https://github.com/oahciy/acebook-priceless
+5. Github Makers master/main repo: https://github.com/makersacademy/acebook-node-template
+6. Miro board: https://miro.com/app/board/uXjVPPd0XIc=/
+7. Trello board: https://trello.com/b/nq40fIRV/acebook
 
 
 
