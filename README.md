@@ -1,6 +1,7 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=180&section=header&text=PROJECT:%20Acebook&fontSize=90&animation=fadeIn)
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=190&section=header&text=PROJECT:%20Acebook&fontSize=90&animation=fadeIn&desc=Team%20Priceless&descAlignY=75&descAlign=89)
 <div align = "center">
-  Heroku APP: https://dmeowbook.herokuapp.com/
+
+  **Heroku APP:** https://dmeowbook.herokuapp.com/
 </div>
 
 # Tech Stack
@@ -48,7 +49,7 @@
 
 
 # TEAM Priceless
-![ddrmv's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddrmv&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![G-Redos's GitHub stats](https://github-readme-stats.vercel.app/api?username=G-Redos&count_private=true&show_icons=true&include_all_commits=true&card_width=325px)
+![ddrmv's GitHub stats](https://github-readme-stats.vercel.app/api?username=ddrmv&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![G-Redos's GitHub stats](https://github-readme-stats.vercel.app/api?username=G-Redos&count_private=true&show_icons=true&include_all_commits=true&card_width=300px)
 
 ![44jovi's GitHub stats](https://github-readme-stats.vercel.app/api?username=44jovi&&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) ![MarinaIvanova-1 's GitHub stats](https://github-readme-stats.vercel.app/api?username=MarinaIvanova-1&count_private=true&show_icons=true&include_all_commits=true&card_width=300px) 
 
