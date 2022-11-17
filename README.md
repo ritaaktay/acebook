@@ -36,7 +36,5 @@ Tested with Jest and Cypress.
 ## Design
 
 ### A digaram of the friending feature request-response cycles
-![alt text](https://i.ibb.co/HpQndR3/Untitled-2022-10-19-1217-2.png)
-
-![alt text](./public/img/diagram.png)
+![alt text](./public/images/diagram.png)
 
