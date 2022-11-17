@@ -31,7 +31,8 @@ Tested with Jest and Cypress.
 
 
 ## Unit Test Coverage
-![alt text](https://i.ibb.co/zst63k3/Screenshot-2022-10-19-at-15-57-19.png)
+![alt text](./public/images/tests.png)
+
 
 ## Design
 
